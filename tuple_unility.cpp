@@ -6,6 +6,9 @@ using namespace std;
 #include <string>
 #include <iostream>
 
+
+
+
 template <unsigned int N = 0, class F, class... T>
 typename enable_if<N == sizeof...(T), void>::type for_each(tuple<T...>&, F&& f) {}
 
