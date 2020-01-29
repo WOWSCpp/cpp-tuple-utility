@@ -1,3 +1,18 @@
+/******************************************************************************
+ * A tiny tool hopefully can help debug with all kinds of basic std data structures
+ * Now support:
+ * 1. Single Dimention
+ * vector<T>
+ * list<T>
+ * tuple<T...>
+ * map<T, U>, unordered_map<T, U>
+ * set<T>, unordered_set<T>
+ * 
+ * 2. Multiple Dimentions
+ * N-D vector
+ * map<T, N-D vector>, etc.
+ *****************************************************************************/
+
 #include <tuple>
 #include <vector>
 #include <list>
@@ -9,21 +24,6 @@
 #include <iostream>
 #include <iterator>
 #include <type_traits>
-
-
-/*
-Now support:
-1. Single Dimention
-vector<T>
-list<T>
-tuple<T...>
-map<T, U>, unordered_map<T, U>
-set<T>, unordered_set<T>
-
-2. Multiple Dimentions
-N-D vector
-map<T, N-D vector>, etc.
-*/
 
 
 template <unsigned int N = 0, class F, class...T>
@@ -130,7 +130,7 @@ int main(){
 
     std::set<std::string> s = {"one", "two", "three"};
     print(s);
-    
+
 
 	return 0;
 }
